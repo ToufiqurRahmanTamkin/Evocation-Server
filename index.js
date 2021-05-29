@@ -2,8 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import postRoutes from './routes/posts.js';
 
-import postRoutes from './routes/posts.js'
+require('dotenv').config()
 
 // const express = require('express');
 const app = express();
