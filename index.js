@@ -5,7 +5,6 @@ import cors from 'cors';
 
 import postRoutes from './routes/posts.js';
 
-
 const app = express();
 
 app.use('/posts', postRoutes);
@@ -16,7 +15,12 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://evocation:evocation123@cluster0.14pyq.mongodb.net/Evocation?retryWrites=true&w=majority';
+app.get('/', (req,res)=>{
+  res.send('hello it works!');
+})
+
+
+const CONNECTION_URL = 'mongodb+srv://evocation:evocation123@cluster0.14pyq.mongodb.net/test?retryWrites=true&w=majority'
 
 const PORT = process.env.PORT || 5000;
 
